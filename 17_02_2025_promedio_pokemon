@@ -1,0 +1,11 @@
+nombre=input("Ingresa el nombre de tu pokemon: ")
+sal=int(input("Ingresa los puntos de salud de tu pokemon: "))
+atk=int(input("Ingresa el nivel de ataque de tu pokemon: "))
+df=int(input("Ingresa el nivel de defensa de tu pokemon: "))
+atkesp=int(input("Ingresa el nivel de ataque especial de tu pokemon: "))
+dfesp=int(input("Ingresa el nivel de defensa especial de tu pokemon: "))
+vel=int(input("Ingresa el nivel de velocidad de tu pokemon: "))
+sum=sal+atk+df+atkesp+dfesp+vel
+prom=sum/6
+print("El pokemon", nombre,"tiene un promedio de", prom)
+print("La suma de las caracteristicas base de", nombre, "es", sum)
