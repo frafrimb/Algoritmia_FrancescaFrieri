@@ -1,0 +1,11 @@
+a=int(input("ingresa numero a: "))
+b=int(input("ingresa numero b: "))
+proceso=(input("que quiere hacer con los numeros? \n suma \n resta \n multiplicación \n división \noperación:  "))
+if proceso=="suma":
+  print(a+b)
+elif proceso=="resta":
+  print(a-b)
+elif proceso=="multiplicación":
+  print(a*b)
+elif proceso=="división":
+  print(a/b) 
