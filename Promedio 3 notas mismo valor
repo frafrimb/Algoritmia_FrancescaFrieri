@@ -1,0 +1,6 @@
+#notas de mismo valor 
+not1=float(input("ingresar nota primer parcial"))
+not2=float(input("ingresar nota segundo parcial"))
+not3=float(input("ingresar nota tercer parcial"))
+notfin=(not1 + not2 + not3)/3
+print("su nota final es:", notfin)
