@@ -1,0 +1,17 @@
+x=float(input("Ingresa coordenada x "))
+y=float(input("Ingresa coordenada y "))
+
+if x==0 and y==0:
+  print("El punto",x,",",y,"se encuentra en el origen")
+elif x>0 and y>0:
+  print("El punto",x,",",y,"se encuentra en el cuadrante 1 ")
+elif x>0 and y<0:
+  print("El punto",x,",",y,"se encuentra en el cuadrante 2")
+elif x<0 and y<0:
+  print("El punto",x,",",y,"se encuentra en el cuadrante 3")
+elif x<0 and y>0:
+  print("El punto",x,",",y,"se encuentra en el cuadrante 4")
+elif x==0 and y!=0:
+  print("El punto",x,",",y,"se encuentra sobre el eje y")
+elif x!=0 and y==0:
+  print("El punto",x,",",y,"se encuentra sobre el eje x")
