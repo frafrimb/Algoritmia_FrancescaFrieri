@@ -1,3 +1,5 @@
+import math 
+
 nombre=input("Ingresa el nombre de tu pokemon: ")
 sal=int(input("Ingresa los puntos de salud de tu pokemon: "))
 atk=int(input("Ingresa el nivel de ataque de tu pokemon: "))
@@ -9,3 +11,13 @@ sum=sal+atk+df+atkesp+dfesp+vel
 prom=sum/6
 print("El pokemon", nombre,"tiene un promedio de", prom)
 print("La suma de las caracteristicas base de", nombre, "es", sum)
+sal=(sal-prom)**2
+atk=(atk-prom)**2
+df=(df-prom)**2
+atkesp=(atkesp-prom)**2
+dfesp=(dfesp-prom)**2
+vel=(vel-prom)**2
+sumu=sal+atk+df+atkesp+dfesp+vel
+promu= sumu/5
+desv=math.sqrt(promu)
+print("La desviación estandar de las caracteristicas de",nombre,"es",desv)
