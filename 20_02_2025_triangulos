@@ -2,6 +2,7 @@ x=float(input("Ingrese el valor del primer lado: "))
 y=float(input("Ingrese el valor del segundo lado: "))
 z=float(input("Ingrese el valor del tercer lado: "))
 while (x and y and z) <= 0:
+  print("ingrese medidas validas")
   x=float(input("Ingrese el valor del primer lado: "))
   y=float(input("Ingrese el valor del segundo lado: "))
   z=float(input("Ingrese el valor del tercer lado: "))
