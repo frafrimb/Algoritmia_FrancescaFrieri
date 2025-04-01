@@ -1,0 +1,21 @@
+cod=str(input("Ingrese las letras de identificación en su boleta en mayusculas")) 
+bol=int(input("Ingrese su numero de boleta"))
+
+if cod == "FOA":
+  if bol%25!=0:
+    print("¡Número de boleta valido!")
+  else:
+    print("Non essere clandestini")
+elif cod == "ADA":
+  if bol%27==0 and bol%2==0:
+    print("¡Número de boleta valido!")
+  else:
+    print("Non essere clandestini")
+elif cod=="ADE":
+  if bol%2 !=0:
+    print("¡Número de boleta valido!")
+  else:
+    print("Non essere clandestini")
+
+else:
+  print("Non essere clandestini")
