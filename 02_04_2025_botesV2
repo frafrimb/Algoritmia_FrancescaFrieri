@@ -1,0 +1,62 @@
+n=int(input("ingrese numero de personas en la fila "))
+
+k=float(input("ingrese capacidad maxima bote MARLIN "))
+h=float(input("ingrese capacidad maxima bote NEMO "))
+
+g=float(input("peso instructor MARLIN "))
+p=float(input("peso instructor NEMO1 "))
+q=float(input("peso instructor NEMO2 "))
+
+nemo=p+q
+marlin=g
+
+i=0
+
+mep=0 #subieron marlin
+nep=0 #subieron nemo
+
+rech=0
+min=999
+max=0
+
+ 
+while i<n :
+
+  age=int(input("Ingrese su edad"))
+
+  while (age<7) or (age>50):
+    print("edad invalida, siguiente persona")
+    age=int(input("Ingrese su edad"))
+    rech=rech+1
+    i=i-1
+
+  if age<min:
+    min=age
+
+  if age>max:
+    max=age
+
+  if (age>=7) and (age<=13) and (nemo<k):
+      nep=nep+1
+      peso1=float(input("Ingrese su peso"))
+      nemo=nemo+peso1
+      i=i-1
+  
+  else:
+    if (age>=7) and (age<=13) and (nemo>=k):
+      print("Cupo lleno para categoria Nemo")
+      
+if (age>=14) and (age<=50) and (marlin<h):
+  mep=mep+1
+  peso2=float(input("Ingrese su peso"))
+  marlin=marlin+peso2
+  i=i-1 
+else:
+  if (age>=14) and (age<=50) and (marlin>=h):
+    print("Cupo lleno para categoria Marlin")
+
+print("capacidad nemo", nep)
+print("capacidad marlin", mep)
+print("rechazados por edad", rech)
+print("edad maxima", max)
+print("edad minima", min)
