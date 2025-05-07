@@ -1,0 +1,88 @@
+def prime (a):
+  h=2
+  for h in range(h,a-1):
+    if (a%h==0):
+      return 0
+    else:
+      return 1
+
+def par (b):
+  t=b//10
+  if t%2==0:
+    return 1
+  else:
+    return 0
+
+i=0
+men=0
+max=0
+nax="x"
+acusem=0
+consem=0
+IA=0
+GPU=0
+desc=0
+premio="no gano nada"
+
+num=int(input("ingrese numero de participantes "))
+if num<0:
+  num=int(input("ingrese numero de participantes "))
+  
+base=float(input("ingrese valor base de mensualidad "))
+
+while i<num:
+  edad=int(input("ingrese su edad "))
+  while edad<0:
+    edad=int(input("ingrese su edad "))
+  
+  nom=input("ingrese su nombre ")
+  plan=int(input("elija su plan: \n mensual=1 \n semestral=2 \n anual=3 \n"))
+  while (plan!=1) and (plan!=2) and (plan!=3):
+    plan=int(input("elija su plan: \n mensual=1 \n semestral=2 \n anual=3 \n"))
+  deux=int(input("ingrese un numero de dos digitos"))
+  while (deux<10) and (deux>99):
+    deux=int(input("ingrese un numero de dos digitos"))
+
+  if edad>max:
+    max=edad
+    nax=nom
+
+  if plan==1: #mensual
+    pagar=base-(base*0.05)
+    desc=base*0.05
+    men=men+1
+  elif plan==2: #semestral
+    acusem=acusem+edad 
+    consem=consem+1
+    pagar=base-(base*0.15)
+    desc=base*0.15
+  else:
+    if (edad>14) and (edad<=40): 
+      pagar=base-(base*0.25)
+      desc=base*0.25
+    elif edad>40:
+      pagar=base-(base*0.35)
+      desc=base*0.35
+
+  if prime(deux)==1:
+    premio="te ganaste acceso a una GPU dedicada por 1 mes."
+    GPU=GPU+1
+
+  if par(deux)==1:
+    premio="te ganaste un asistente virtual IA personalizado."
+    IA=IA+1
+
+  print("su valor base es", base) 
+  print("su descuento es de", desc)
+  print("valor final a pagar", pagar)
+  print(premio) 
+  i=i+1
+
+prom=acusem/consem
+print("investigadores inscritos plan mensual: ",men )
+print("nombre y edad de investigador de mayor edad: ", nax, "y", max)
+print("Edad promedio de los inscritos en el plan semestral: ", prom)
+print("ganaron asistente virtual IA:", IA)
+print("ganaron GPU dedicada:", GPU)
+
+
